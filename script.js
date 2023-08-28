@@ -1,4 +1,14 @@
 // Function to show the cookie consent banner.
+document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+        });
+
+        // Disable Ctrl+U (View Source)
+document.addEventListener('keydown', function (e) {
+            if (e.ctrlKey && (e.key === 'u' || e.key === 'U')) {
+                e.preventDefault();
+            }
+        });
 function showCookieBanner() {
     var cookieBannerContainer = document.getElementById("cookie-banner-container");
     cookieBannerContainer.style.display = "flex"; // Use flex to center vertically
